@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cofre de Senhas</title>
+    <meta
+      name="description"
+      content="Aplicativo Android para guardar senhas em um arquivo encriptado no seu próprio Google Drive."
+    />
+    <style>
+      :root {
+        --bg: #0e1116;
+        --surface: #171b22;
+        --border: #2a313c;
+        --text: #f2f4f8;
+        --muted: #9aa4b2;
+        --accent: #ff7a2f;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 40px 0 12px;
+      }
+      p,
+      li {
+        color: var(--muted);
+      }
+      strong {
+        color: var(--text);
+      }
+      a {
+        color: var(--accent);
+      }
+      .lead {
+        font-size: 1.05rem;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px 24px;
+        margin: 24px 0;
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        margin-top: 56px;
+        padding-top: 24px;
+        font-size: 0.9rem;
+      }
+      footer a {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Cofre de Senhas</h1>
+      <p class="lead">
+        Aplicativo Android para guardar credenciais em um arquivo encriptado, salvo no seu próprio
+        Google Drive.
+      </p>
+
+      <div class="card">
+        <p style="margin: 0">
+          <strong>Nada sai do seu aparelho em texto legível.</strong> A chave que protege o arquivo
+          nasce da sua senha mestra e nunca deixa o celular. O Google armazena bytes cifrados que
+          nem ele nem o desenvolvedor conseguem ler.
+        </p>
+      </div>
+
+      <h2>O que o app faz</h2>
+      <ul>
+        <li>Guarda nome, usuário, senha, site e anotações de cada credencial.</li>
+        <li>Copia usuário e senha com um toque, limpando a área de transferência em seguida.</li>
+        <li>Desbloqueia por senha mestra ou pela digital do aparelho.</li>
+        <li>Sincroniza o arquivo encriptado com o seu Google Drive, para backup e segundo aparelho.</li>
+        <li>Bloqueia capturas de tela e se oculta no seletor de tarefas.</li>
+      </ul>
+
+      <h2>Como a proteção funciona</h2>
+      <p>
+        Os dados são encriptados com XChaCha20-Poly1305. A chave é derivada da senha mestra por
+        Argon2id, propositalmente lento, para encarecer tentativas de adivinhação. A senha mestra
+        não é armazenada em lugar nenhum — nem no aparelho, nem no Drive, nem em servidor algum.
+      </p>
+      <p>
+        A consequência disso é importante e vale repetir:
+        <strong>não existe recuperação de senha mestra</strong>. Se ela for esquecida, o arquivo
+        torna-se permanentemente ilegível.
+      </p>
+
+      <h2>Acesso ao Google Drive</h2>
+      <p>
+        O app pede apenas o escopo <code>drive.file</code>, que dá acesso exclusivamente aos
+        arquivos criados pelo próprio aplicativo. Ele não consegue — tecnicamente, não apenas por
+        política — enxergar qualquer outro arquivo do seu Drive.
+      </p>
+
+      <footer>
+        <a href="./privacidade.html">Política de Privacidade</a>
+        <a href="./termos.html">Termos de Serviço</a>
+      </footer>
+    </main>
+  </body>
+</html>

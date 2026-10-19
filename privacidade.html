@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de Privacidade — Cofre de Senhas</title>
+    <meta
+      name="description"
+      content="Política de privacidade do aplicativo Cofre de Senhas: nenhum dado é coletado."
+    />
+    <style>
+      :root {
+        --bg: #0e1116;
+        --surface: #171b22;
+        --border: #2a313c;
+        --text: #f2f4f8;
+        --muted: #9aa4b2;
+        --accent: #ff7a2f;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin: 0 0 4px;
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin: 36px 0 10px;
+      }
+      p,
+      li {
+        color: var(--muted);
+      }
+      strong {
+        color: var(--text);
+      }
+      a {
+        color: var(--accent);
+      }
+      .date {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 32px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px 24px;
+        margin: 24px 0;
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        margin-top: 56px;
+        padding-top: 24px;
+        font-size: 0.9rem;
+      }
+      footer a {
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Política de Privacidade</h1>
+      <p class="date">Cofre de Senhas · atualizada em 19 de outubro de 2026</p>
+
+      <div class="card">
+        <p style="margin: 0">
+          <strong>Resumo:</strong> este aplicativo não coleta, não transmite e não armazena nenhum
+          dado pessoal seu. Não existe servidor do desenvolvedor. Suas credenciais ficam encriptadas
+          no seu aparelho e, se você quiser, no seu próprio Google Drive.
+        </p>
+      </div>
+
+      <h2>1. Quem somos</h2>
+      <p>
+        O Cofre de Senhas é um aplicativo Android desenvolvido e mantido por um desenvolvedor
+        individual, para uso pessoal e de pessoas convidadas por ele. Não é um serviço comercial e
+        não há empresa por trás dele.
+      </p>
+
+      <h2>2. Dados que o aplicativo coleta</h2>
+      <p><strong>Nenhum.</strong> Especificamente:</p>
+      <ul>
+        <li>Não há servidores operados pelo desenvolvedor, e portanto não há para onde enviar dados.</li>
+        <li>Não há ferramentas de análise, rastreamento, publicidade ou telemetria.</li>
+        <li>Nenhuma informação é compartilhada com terceiros, porque nenhuma é recebida.</li>
+      </ul>
+
+      <h2>3. Dados que você guarda no aplicativo</h2>
+      <p>
+        As credenciais que você cadastra ficam em um arquivo encriptado no armazenamento privado do
+        aplicativo, no seu aparelho. A encriptação usa XChaCha20-Poly1305, com chave derivada da sua
+        senha mestra pelo algoritmo Argon2id.
+      </p>
+      <p>
+        A senha mestra <strong>não é armazenada</strong> em lugar algum. Ela existe apenas enquanto
+        você a digita. Por isso, o desenvolvedor não tem — nem teria como ter — meios de ler o
+        conteúdo do seu cofre ou de recuperá-lo caso você esqueça a senha.
+      </p>
+      <p>
+        Se você ativar o desbloqueio por digital, a chave interna do cofre passa a ser guardada no
+        Keystore do Android, protegida pelo hardware do aparelho e liberada apenas pela sua
+        biometria ou PIN.
+      </p>
+
+      <h2>4. Uso do Google Drive e da sua conta Google</h2>
+      <p>
+        A conexão com o Google é opcional e serve a dois propósitos, ambos limitados:
+      </p>
+      <ul>
+        <li>
+          <strong>Identificar a conta:</strong> o aplicativo lê o endereço de e-mail da conta
+          escolhida, apenas para exibi-lo na tela de ajustes.
+        </li>
+        <li>
+          <strong>Guardar o arquivo do cofre:</strong> o aplicativo cria uma pasta chamada "Cofre de
+          Senhas" no seu Drive e grava nela um único arquivo, já encriptado.
+        </li>
+      </ul>
+      <p>
+        O único escopo solicitado é
+        <code>https://www.googleapis.com/auth/drive.file</code>, que concede acesso exclusivamente
+        aos arquivos criados pelo próprio aplicativo. O aplicativo não tem permissão para ler,
+        listar ou modificar qualquer outro arquivo do seu Drive.
+      </p>
+      <p>
+        O arquivo enviado ao Drive está encriptado antes de sair do aparelho. Para o Google, ele é
+        uma sequência de bytes sem significado.
+      </p>
+
+      <h2>5. Uso limitado de dados do Google</h2>
+      <p>
+        O uso que este aplicativo faz das informações recebidas das APIs do Google adere à
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener"
+          >Política de Dados do Usuário dos Serviços de API do Google</a
+        >, incluindo os requisitos de Uso Limitado. Os dados acessados são usados exclusivamente
+        para prover as funcionalidades descritas nesta política, não são transferidos a terceiros,
+        não são usados para publicidade e não são lidos por pessoa alguma.
+      </p>
+
+      <h2>6. Permissões do aparelho</h2>
+      <ul>
+        <li><strong>Biometria:</strong> opcional, usada apenas para desbloquear o cofre.</li>
+        <li>
+          <strong>Área de transferência:</strong> usada quando você toca em copiar. O conteúdo é
+          apagado automaticamente após alguns segundos.
+        </li>
+        <li><strong>Internet:</strong> usada apenas para falar com o Google Drive.</li>
+      </ul>
+
+      <h2>7. Como apagar seus dados</h2>
+      <ul>
+        <li>
+          <strong>No aparelho:</strong> Ajustes → "Apagar cofre deste aparelho", ou simplesmente
+          desinstalar o aplicativo.
+        </li>
+        <li>
+          <strong>No Drive:</strong> apague a pasta "Cofre de Senhas" e esvazie a lixeira.
+        </li>
+        <li>
+          <strong>Revogar o acesso:</strong> em
+          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener"
+            >myaccount.google.com/permissions</a
+          >.
+        </li>
+      </ul>
+      <p>
+        Como o desenvolvedor não possui cópia alguma dos seus dados, não há nada para solicitar a
+        ele: a exclusão é inteiramente feita por você.
+      </p>
+
+      <h2>8. Crianças</h2>
+      <p>O aplicativo não é direcionado a menores de 13 anos e não coleta dados de ninguém.</p>
+
+      <h2>9. Alterações nesta política</h2>
+      <p>
+        Mudanças serão publicadas nesta mesma página, com a data de atualização no topo revisada.
+      </p>
+
+      <h2>10. Contato</h2>
+      <p>
+        Dúvidas sobre esta política podem ser enviadas para
+        <a href="mailto:edilson.moreira.work@gmail.com">edilson.moreira.work@gmail.com</a>.
+      </p>
+
+      <footer>
+        <a href="./index.html">Início</a>
+        <a href="./termos.html">Termos de Serviço</a>
+      </footer>
+    </main>
+  </body>
+</html>
