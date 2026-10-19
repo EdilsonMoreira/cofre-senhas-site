@@ -92,15 +92,21 @@
       </p>
 
       <div class="card warn">
-        <h2 style="margin-top: 0; color: var(--warn)">3. Não existe recuperação de senha mestra</h2>
+        <h2 style="margin-top: 0; color: var(--warn)">3. A senha mestra não pode ser devolvida</h2>
+        <p>
+          A chave que protege o seu cofre é derivada da sua senha mestra e nunca é armazenada. Não
+          existe, portanto, "esqueci minha senha": ninguém — nem você, nem o desenvolvedor, nem o
+          Google — tem de onde buscá-la.
+        </p>
         <p style="margin-bottom: 0">
-          A chave que protege o seu cofre é derivada da sua senha mestra e nunca é armazenada.
+          Por isso o aplicativo gera uma <strong>chave de recuperação</strong> quando o cofre é
+          criado, exibida uma única vez, e permite o desbloqueio por biometria. Qualquer um dos dois
+          devolve o acesso e permite definir uma senha nova.
           <strong>
-            Se você esquecer a senha mestra, o conteúdo do cofre torna-se permanentemente
-            inacessível</strong
-          >, para você e para qualquer outra pessoa, incluindo o desenvolvedor. Isso é uma
-          consequência inevitável do desenho de segurança, não uma falha. Anote sua senha mestra em
-          um lugar físico seguro.
+            Sem a senha mestra, sem a chave de recuperação e sem a biometria do aparelho, o conteúdo
+            do cofre torna-se permanentemente inacessível</strong
+          >. Isso é consequência inevitável do desenho de segurança, não uma falha. Guarde a chave de
+          recuperação em local seguro, e separado de onde o cofre é armazenado.
         </p>
       </div>
 

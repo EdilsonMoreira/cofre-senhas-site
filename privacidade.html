@@ -109,7 +109,13 @@
       <p>
         A senha mestra <strong>não é armazenada</strong> em lugar algum. Ela existe apenas enquanto
         você a digita. Por isso, o desenvolvedor não tem — nem teria como ter — meios de ler o
-        conteúdo do seu cofre ou de recuperá-lo caso você esqueça a senha.
+        conteúdo do seu cofre.
+      </p>
+      <p>
+        O aplicativo gera uma <strong>chave de recuperação</strong> na criação do cofre, exibida uma
+        única vez. Ela protege uma segunda cópia da chave interna, guardada dentro do próprio
+        arquivo encriptado. Essa chave de recuperação não é enviada a lugar nenhum, não é
+        armazenada em texto legível e não é conhecida pelo desenvolvedor: fica sob sua guarda.
       </p>
       <p>
         Se você ativar o desbloqueio por digital, a chave interna do cofre passa a ser guardada no
